@@ -1,0 +1,9 @@
+.modal {
+  transform: scale(1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &.close {
+    transform: scale(0);
+  }
+}

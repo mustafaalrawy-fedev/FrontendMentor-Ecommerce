@@ -1,0 +1,42 @@
+@use '../../../../scss/helpers/mixins.scss' as *;
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-block: 20px;
+  // @include mediaQuery(mobile) {
+  //   justify-content: space-between;
+  // }
+  // @include mediaQuery(small) {
+  //   justify-content: space-between;
+  // }
+  > .image {
+    > img {
+      width: 70px;
+    }
+  }
+  > .info {
+    width: 100%;
+    > .price {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      > span {
+        .total-price {
+          font-weight: bold;
+          margin-left: 8px;
+        }
+      }
+      .delete-btn {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.checkout-btn {
+  width: 100%;
+  margin-top: 8px;
+}

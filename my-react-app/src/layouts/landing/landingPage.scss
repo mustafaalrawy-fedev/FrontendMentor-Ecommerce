@@ -1,0 +1,17 @@
+@use '../../scss/helpers/mixins.scss' as *;
+
+.products {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  margin-block: 100px;
+  @include mediaQuery(mobile) {
+    flex-direction: column;
+    margin-block: 0px 100px;
+  }
+  @include mediaQuery(small) {
+    flex-direction: column;
+    margin-block: 0px 100px;
+  }
+}

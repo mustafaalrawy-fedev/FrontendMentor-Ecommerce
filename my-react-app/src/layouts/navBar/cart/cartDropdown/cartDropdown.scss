@@ -1,0 +1,36 @@
+@use '../../../../scss/helpers/mixins.scss' as *;
+
+.cart-drop-down {
+  position: absolute;
+  top: 110px;
+  right: -15px;
+  width: 350px;
+  height: 220px;
+  padding: 16px;
+  box-shadow: black 0px 0px 12px -5px;
+  transform: scale(1);
+  transition: var(--durations);
+  background-color: var(--white);
+  @include mediaQuery(mobile) {
+    top: 125px;
+    right: 0;
+    width: 100%;
+  }
+  @include mediaQuery(small) {
+    top: 125px;
+    right: 0;
+    width: 100%;
+  }
+  > .cart-drop-down-header {
+    border-bottom: 0.1rem solid var(--dark-grayish-blue);
+  }
+  > .cart-drop-down-content {
+    > h6 {
+      text-align: center;
+      margin-top: 70px;
+    }
+  }
+  &.close {
+    transform: scale(0);
+  }
+}

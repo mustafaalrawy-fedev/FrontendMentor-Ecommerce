@@ -1,0 +1,27 @@
+@use './rules/global_rules.scss';
+@use './helpers/mixins.scss' as *;
+
+// div.container {
+//   padding-inline: 50px;
+// }
+
+h6 {
+  color: var(--dark-grayish-blue);
+}
+h1 {
+  color: var(--very-dark-blue);
+}
+
+button {
+  padding: 8px 60px;
+  border: none;
+  outline: none;
+  background-color: var(--main-color);
+  color: var(--very-dark-blue);
+  font-weight: bold;
+  border-radius: var(--main-radius);
+  transition: var(--durations);
+  &:hover {
+    background-color: var(--secondary-color);
+  }
+}

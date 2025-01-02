@@ -1,0 +1,15 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  z-index: 3;
+  display: block;
+  transition: var(--durations);
+  &.close {
+    display: none;
+    // opacity: 0;
+  }
+}

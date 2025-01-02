@@ -1,0 +1,53 @@
+@use '../../../../scss/helpers/mixins.scss' as *;
+
+.product-image {
+  display: block;
+  width: 500px;
+  cursor: pointer;
+  @include mediaQuery(mobile) {
+    display: none;
+  }
+  @include mediaQuery(small) {
+    display: none;
+  }
+  > img {
+    width: 500px;
+    border-radius: var(--main-radius);
+  }
+  > .product-image-selectors {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    > .thumbnail {
+      position: relative;
+      // z-index: -1;
+      &::after,
+      > .highlight {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--black-lightBox);
+        z-index: 2;
+        border-radius: var(--main-radius);
+        opacity: 0;
+        border: 4px solid transparent;
+        transition: var(--durations);
+        cursor: pointer;
+        // transform: scale(1);
+      }
+      &:hover::after,
+      .highlight.active {
+        opacity: 0.75;
+        border: 4px solid var(--main-color);
+      }
+
+      > img {
+        width: 100px;
+        border-radius: var(--main-radius);
+      }
+    }
+  }
+}
